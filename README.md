@@ -7,11 +7,15 @@ This is probably not a problem when using regular AppSettings but I found it har
 The library is built in Net Standard 2.0 but can be downloaded and rebuilt to whatever you need. 
 
 ### How To
+
+[Net Core 2.0 Api Example](NetCoreApiExample)
+
+
 Startup.cs
 ```csharp
 services.ConfigureCustom<MyConfiguration>(Configuration);
 ```
-Startup.cs
+ValuesController.cs
 ```csharp
 [HttpGet]
 public MyConfiguration Get([FromServices] IOptions<MyConfiguration> conf)
