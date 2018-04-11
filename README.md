@@ -11,22 +11,31 @@ Startup.cs
 ```csharp
 services.ConfigureCustom<MyConfiguration>(Configuration);
 ```
+Startup.cs
+```csharp
+[HttpGet]
+public MyConfiguration Get([FromServices] IOptions<MyConfiguration> conf)
+{
+    return conf.Value;
+}
+```
+
 MyConfiguration.cs
 ```csharp
 services.ConfigureCustom<MyConfiguration>(Configuration);
 
-    public class MyConfiguration
-    {
-        [BindToConfiguration("setting-1")]
-        public string FromAppSettings1 { get; set; }
+public class MyConfiguration
+{
+    [BindToConfiguration("setting-1")]
+    public string FromAppSettings1 { get; set; }
 
-        [BindToConfiguration("setting-2")]
-        public string FromAppSettings2 { get; set; }
+    [BindToConfiguration("setting-2")]
+    public string FromAppSettings2 { get; set; }
 
-        public string FromAppSettings3 { get; set; }
-    }
+    public string FromAppSettings3 { get; set; }
+}
 ```
-AppSettings.json
+appsettings.json
 ```json
 {
   "setting-1" :  "Setting1", 
