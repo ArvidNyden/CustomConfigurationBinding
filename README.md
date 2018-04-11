@@ -1,6 +1,6 @@
 # Custom Configuration Bindings
 
-This is probably not a problem when using regular AppSettings but I found it hard to bind my configuration when using environment variables as well as custom providers as Azure Key Value or AWS parameter store. Their naming conventions just to mapp to what my property names. 
+This is probably not a problem when using regular AppSettings but I found it hard to bind my configuration when using environment variables as well as custom providers as Azure Key Vault or AWS Parameter Store. Their naming conventions just don't mapp to what I want my property names to be. 
 
 ## Framework
 
