@@ -9,7 +9,7 @@ namespace NetCoreApiExample.Controllers
     {
         // GET api/values
         [HttpGet]
-        public MyConfiguration Get(IOptions<MyConfiguration> conf)
+        public MyConfiguration Get([FromServices] IOptions<MyConfiguration> conf)
         {
             return conf.Value;
         }

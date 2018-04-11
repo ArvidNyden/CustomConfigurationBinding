@@ -23,7 +23,9 @@
       "launchBrowser": true,
       "launchUrl": "api/values",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "FromEnv3": "From env 3",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "FROMENV2": "From environment 2"
       },
       "applicationUrl": "http://localhost:54181/"
     }

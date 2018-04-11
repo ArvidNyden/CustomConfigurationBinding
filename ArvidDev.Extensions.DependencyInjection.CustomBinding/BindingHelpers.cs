@@ -28,13 +28,8 @@ namespace ArvidDev.Extensions.DependencyInjection.CustomBinding
                 // Only use last if multiple
                 var propCustomBindName = prop.GetCustomAttributes<BindToConfigurationAttribute>().ToList();
 
-                if (!propCustomBindName.Any())
-                    return;
-
-                var customBindingName = propCustomBindName.Last().BindingName;
-
                 // If custom binding is null use name of property
-                var bindingName = propCustomBindName == null ? propName : customBindingName;
+                var bindingName = propCustomBindName.Any() ? propCustomBindName.Last().BindingName : propName;
 
                 // Only set if binding is correct and property have a set
                 if (bindingName == property && prop.CanWrite)

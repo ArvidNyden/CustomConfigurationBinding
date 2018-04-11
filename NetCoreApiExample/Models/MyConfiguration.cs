@@ -15,7 +15,7 @@ namespace NetCoreApiExample.Models
         [BindToConfiguration("ASPNETCORE_ENVIRONMENT")]
         public string FromEnv1 { get; set; }
 
-        [BindToConfiguration("FROMENV2")] 
+        [BindToConfiguration("FROMENV2")]
         public string FromEnv2 { get; set; }
 
         public string FromEnv3 { get; set; }
